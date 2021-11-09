@@ -20,7 +20,7 @@
                 <!-- <a href="/checkout" class="card-link">Card link</a> -->
                 <!-- <router-link to="/checkout">Buy</router-link> -->
                 <!-- <router-link :to="`/checkout/${load._id}`"> Buy </router-link> -->
-                <button @click="send2Native">Buy</button>
+                <input type="button" @click="send2Native" id="btn" value="buy" />
               </div>
             </div>
             <br>
@@ -71,6 +71,9 @@ export default {
     /* eslint-disable */
     send2Native() {
       JSBridge.showMessageInNative('Received')
+    },
+    updateFromNative() {
+      document.getElementById('btn').value = "bye"
     },
     /* eslint-disable */
 
