@@ -19,7 +19,8 @@
                 <p class="card-text">Can be used to avail promos! </p>
                 <!-- <a href="/checkout" class="card-link">Card link</a> -->
                 <!-- <router-link to="/checkout">Buy</router-link> -->
-                <router-link :to="`/checkout/${load._id}`"> Buy </router-link>
+                <!-- <router-link :to="`/checkout/${load._id}`"> Buy </router-link> -->
+                <button @click="send2Native">Buy</button>
               </div>
             </div>
             <br>
@@ -67,6 +68,13 @@ export default {
     }
   },
   methods: {
+    /* eslint-disable */
+    send2Native() {
+      JSBridge.showMessageInNative('Received')
+    },
+    /* eslint-disable */
+
+
     getLoads() {
       const url = 'http://192.168.254.117:3000/'
       return new Promise ((resolve,reject) => {
