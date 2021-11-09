@@ -37,7 +37,32 @@ export default {
   name: 'Load',
   data() {
     return {
-      loads: [],
+      loads: [
+    {
+        "_id": "6184d80d3a1bdb784741c1b4",
+        "name": "P100 Globe Load",
+        "price": 100,
+        "image": "https://3.bp.blogspot.com/-xGwRs69rZ_g/W1BDwVv2CGI/AAAAAAAAJiA/r96QBGuoRwUEMupiORr8Lo__baQdkRz_ACLcBGAs/s1600/globe-logo.png"
+    },
+    {
+        "_id": "6184d8163a1bdb784741c1b5",
+        "name": "P100 Smart Load",
+        "price": 100,
+        "image": "https://www.balanga.com.ph/media/zoo/images/smart_32206d9f834810825bbaba3c55a5abdc.jpg"
+    },
+    {
+        "_id": "6184d8253a1bdb784741c1b6",
+        "name": "P200 Globe Load",
+        "price": 200,
+        "image": "https://3.bp.blogspot.com/-xGwRs69rZ_g/W1BDwVv2CGI/AAAAAAAAJiA/r96QBGuoRwUEMupiORr8Lo__baQdkRz_ACLcBGAs/s1600/globe-logo.png"
+    },
+    {
+        "_id": "6184d82e3a1bdb784741c1b7",
+        "name": "P200 Smart Load",
+        "price": 200,
+        "image": "https://www.balanga.com.ph/media/zoo/images/smart_32206d9f834810825bbaba3c55a5abdc.jpg"
+    }
+],
       error: ''
     }
   },
@@ -62,7 +87,7 @@ export default {
   },
   async created() {
     try {
-      this.loads = await this.getLoads()
+      // this.loads = await this.getLoads()
     } catch(err) {
       this.error = err.message
     }
